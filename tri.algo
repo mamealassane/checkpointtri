@@ -1,0 +1,14 @@
+PROCEDURE tri_insertion(VAR tab : ARRAY_OF INTEGER[n];)
+VAR
+    i , j , n  , elem: INTEGER
+BEGIN
+    FOR i FROM 0 TO n-1 STEP 1  DO
+        elem = tab[i]
+        j = i
+        WHILE (j>0 et tab[j-1]>elem) DO
+            tab[j]=tab[j-1]
+            j-- ;
+        END_WHILE
+        tab[j]=elem
+    END_FOR
+END
